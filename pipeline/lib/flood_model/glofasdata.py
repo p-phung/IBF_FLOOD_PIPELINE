@@ -483,6 +483,13 @@ class GlofasData:
 
     
     def extractGlofasData(self):
+        '''
+        This function executes as follow:
+        1. Read discharge data from GloFAS text file and read thresholds
+        2. Calculate average from 51-ensemble-member GloFAS discharge and its probability
+        3. Check if the GloFAS discharge exceeded the thresholds every forecast lead time at every station
+        4. Save results of 2 and 3 in separate files
+        '''
         
         logger.info('\nExtracting Glofas (FTP) Data\n')
 
